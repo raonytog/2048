@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "mapa.h"
+#include "includes/mapa.h"
 
 struct Mapa {
     unsigned int    ordem;

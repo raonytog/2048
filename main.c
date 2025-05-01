@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "mapa.h"
-#include "peca.h"
+#include "includes/mapa.h"
+#include "includes/peca.h"
 
 #define SIZE 8
 
