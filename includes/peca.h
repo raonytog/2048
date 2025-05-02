@@ -5,11 +5,11 @@ typedef struct Peca Peca;
 
 Peca *criaPeca(int pos[2]);
 
-void atualizaPeca(Peca *peca, int pos[2]);
+void atualizaPeca(void *data, int pos[2]);
 
-void imprimePeca(Peca *peca);
+void imprimePeca(void *data);
 
-void liberaPeca(Peca *peca);
+void liberaPeca(void *data);
 
 
 #endif

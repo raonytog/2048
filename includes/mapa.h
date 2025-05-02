@@ -8,9 +8,15 @@ typedef void (*fptr_libera)(void *data);
 
 typedef struct Mapa Mapa;
 
-Mapa *criaMapa(unsigned int ordem, fptr_print print_f, fptr_libera libera_f);
+int getPontuacao(Mapa *mapa);
 
-void atualizaMapa(Mapa *mapa, int opcao);
+int getOrdem(Mapa *mapa);
+
+int getPosOcupadas(Mapa *mapa);
+
+Mapa *criaMapa(int ordem, fptr_print print_f, fptr_libera libera_f);
+
+void atualizaMapa(Mapa *mapa, char opcao);
 
 void insereMapa(Mapa *mapa, void *data, int pos[2]);
 
