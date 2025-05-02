@@ -1,9 +1,10 @@
-# algumas decisoes para o jogo que vou droppar e nao terminar de fazer
+# Decisoes para o jogo que vou droppar e nao terminar de fazer
 
-# qual modelo fazer o mapa?
+# Questionamento: Qual modelo fazer o mapa?
 
 # 1: 0 representando nulo
-#   .. problema: nao ia rolar com a ideia de representacao para os numeros
+    --Problema: nao ia rolar com a ideia de representacao para os numeros
+
     0 0 0 0
     0 0 0 0
     0 0 0 0
@@ -11,14 +12,15 @@
 
 
 # 2: numero apenas onde existir numero
-#   .. problema: feio?
+    --Problema: feio?
+
     0      
     0      
         0  
         0  
 
 # 3: numeros onde existirem e + nos espacos vazios
-#   .. problema: nenhum lindo beijos mua
+    --Problema: nenhum lindo beijos mua
 
     + + 0 +
     + 0 + +
@@ -26,7 +28,7 @@
     0 + + +
 
 
-# para nao fuder a tela, cada numero do jogo será representado por um decimal de 0 a 9
+# para nao fuder a tela, cada numero do jogo talvez será representado por um decimal de 0 a 9
     0 = 2
     1 = 4
     2 = 8
