@@ -8,24 +8,32 @@
 
 int rpos() { return rand()%SIZE; }
 
+void criaPosicaoValida(Mapa *mapa, int pos[2]) {
+    while (true) {
+        pos[0] = rpos();    pos[1] = rpos();
+        if (getConteudoPosicaoMapa(mapa, pos[0], pos[1]) == NULL) break;
+    }
+}
+
 int main() {
     Mapa *mapa = criaMapa(SIZE, imprimePeca, liberaPeca);
-    int pos[2] = {rand()%8, rand()%8};
+    int pos[2] = {0, 0};
+    criaPosicaoValida(mapa, pos);
     insereMapa(mapa, criaPeca(pos), pos);
     imprimeMapa(mapa);
 
-    char opcao;
+    char opcao = '\0';
     while (true) {
         /** le jogada */
         scanf("%c%*c", &opcao);
         atualizaMapa(mapa, opcao);
-        if (mapaEstaCheio(mapa) == false) break;
-
+        
         /** atualiza o mapa pós jogada adicionando mais uma peça */
-        pos[0] = rpos(); pos[1] = rpos();
+        criaPosicaoValida(mapa, pos);
         insereMapa(mapa, criaPeca(pos), pos);
-
+        
         imprimeMapa(mapa);
+        if (mapaEstaCheio(mapa) == true) break;
     }
 
     printf("Fim de jogo!\n");

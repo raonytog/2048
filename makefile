@@ -3,7 +3,7 @@ all:
 	@ gcc src/*.c -o bin/prog
 
 run:
-	all
+	make all
 	bin/prog
 
 val:

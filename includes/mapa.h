@@ -20,6 +20,8 @@ void atualizaMapa(Mapa *mapa, char opcao);
 
 void insereMapa(Mapa *mapa, void *data, int pos[2]);
 
+void *getConteudoPosicaoMapa(Mapa *mapa, int i, int j);
+
 void imprimeMapa(Mapa *mapa);
 
 void liberaMapa(Mapa *mapa);
